@@ -1,6 +1,10 @@
 # Software Engineering Lab HW1
 ## calculator project
 
+### Contributors
+- Zahra Yousefi Jamarani 97102717
+- Amir Abbas Asgari 97102088
+
 ### Project Schematic
 The schematic of the project is shown below:
 
