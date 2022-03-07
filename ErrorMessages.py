@@ -4,3 +4,4 @@ class ErrorMessages:
     InOperand = 'Invalid Operand'
     Overflow = 'Overflow'
     Underflow = 'Underflow'
+    UnknownFormat = 'Unknown Input Format'
