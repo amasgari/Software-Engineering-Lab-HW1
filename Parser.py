@@ -6,10 +6,15 @@ class Parser:
     def __init__(self):
         pass
 
-    def isNumber(self, n):
+    def getNumber(self, n):
         try:
-            a = float(n)
-            return True
+            if 'e' in n or 'E' in n:
+                num_parts = re.split('e|E', n)
+                mantissa = float(num_parts[0])
+                exponent = float(num_parts[1])
+                return mantissa * 10 ** exponent
+            else:
+                return float(n)
         except:
             return False
 
@@ -18,15 +23,13 @@ class Parser:
         inputs = []
         for inp in t_inputs:
             inputs.append(inp.strip())
-        if len(inputs) < 3:
+        if len(inputs) != 3:
             return ErrorMessages.UnknownFormat
         else:
-            if self.isNumber(inputs[0]) & self.isNumber(inputs[2]):
-                operand1, operand2 = float(inputs[0]), float(inputs[2])
-                operator = inputs[1]
-                if operator in ['+', '-', '/', '*']:
-                    return operand1, operand2, operator
-                else:
-                    return ErrorMessages.UnOperator
-            else:
+            operand1, operand2 = self.getNumber(inputs[0]), self.getNumber(inputs[2])
+            operator = inputs[1]
+            if not operand1 or not operand2:
                 return ErrorMessages.InOperand
+            if operator not in ['+', '-', '/', '*']:
+                return ErrorMessages.UnOperator
+            return operand1, operand2, operator
