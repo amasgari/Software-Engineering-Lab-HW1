@@ -1,3 +1,6 @@
+from ErrorMessages import ErrorMessages
+
+
 class Calculator:
     def __init__(self):
         pass
@@ -15,4 +18,4 @@ class Calculator:
         if b != 0:
             return a / b
         else:
-            return 'Divison by zero'
+            return ErrorMessages.DivZero
