@@ -5,3 +5,5 @@ class ErrorMessages:
     Overflow = 'Overflow'
     Underflow = 'Underflow'
     UnknownFormat = 'Unknown Input Format'
+    InNumber = 'Invalid Number'
+    InBase = "Invalid Base Number"
