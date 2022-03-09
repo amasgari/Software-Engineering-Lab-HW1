@@ -1,3 +1,5 @@
+import math
+
 from ErrorMessages import ErrorMessages
 
 
@@ -19,3 +21,13 @@ class Calculator:
             return a / b
         else:
             return ErrorMessages.DivZero
+
+    def log(self, a, b):
+        if a < 0:
+            return ErrorMessages.InNumber
+        elif b <= 0:
+            return ErrorMessages.InBase
+        try:
+            return math.log(a, b)
+        except:
+            return ErrorMessages.InvalidOperand
