@@ -6,3 +6,4 @@ class Operator(enum.Enum):
     Minus = '-'
     Multiply = '*'
     Division = '/'
+    Power = '^'
