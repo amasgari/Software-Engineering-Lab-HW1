@@ -1,10 +1,6 @@
 from Calculator import Calculator
-from ErrorMessages import ErrorMessages
 from Operator import Operator
 from Parser import Parser
-
-calculator = Calculator()
-parser = Parser()
 
 while True:
     print("Please enter your command, for exit type EXIT")
@@ -12,21 +8,21 @@ while True:
     if inp == 'EXIT':
         break
     else:
-        parse_result = parser.parse(inp)
+        parse_result = Parser.parse(inp)
         out = ''
-        if type(parse_result) is ErrorMessages:
+        if isinstance(parse_result, str):
             out = parse_result
         else:
             if parse_result[2] == Operator.Plus.value:
-                out = calculator.add(parse_result[0], parse_result[1])
+                out = Calculator.add(parse_result[0], parse_result[1])
             elif parse_result[2] == Operator.Minus.value:
-                out = calculator.subtract(parse_result[0], parse_result[1])
+                out = Calculator.subtract(parse_result[0], parse_result[1])
             elif parse_result[2] == Operator.Multiply.value:
-                out = calculator.multiply(parse_result[0], parse_result[1])
+                out = Calculator.multiply(parse_result[0], parse_result[1])
             elif parse_result[2] == Operator.Division.value:
-                out = calculator.divide(parse_result[0], parse_result[1])
+                out = Calculator.divide(parse_result[0], parse_result[1])
             elif parse_result[2] == Operator.Power.value:
-                out = calculator.power(parse_result[0], parse_result[1])
+                out = Calculator.power(parse_result[0], parse_result[1])
             elif parse_result[2] == Operator.log.value:
-                out = calculator.log(parse_result[0], parse_result[1])
+                out = Calculator.log(parse_result[0], parse_result[1])
         print(out)
