@@ -6,6 +6,6 @@
 - Amir Abbas Asgari 97102088
 
 ### Project Schematic
-The schematic of the project is shown below:
+The schematic diagram of the initial version of the project is shown below:
 
 ![alt text](https://github.com/amasgari/Software-Engineering-Lab-HW1/blob/master/Project_intro_chart.jpg)
