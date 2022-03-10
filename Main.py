@@ -26,4 +26,6 @@ while True:
                 out = calculator.multiply(parse_result[0], parse_result[1])
             elif parse_result[2] == Operator.Division.value:
                 out = calculator.divide(parse_result[0], parse_result[1])
+            elif parse_result[2] == Operator.Power.value:
+                out = calculator.power(parse_result[0], parse_result[1])
         print(out)
