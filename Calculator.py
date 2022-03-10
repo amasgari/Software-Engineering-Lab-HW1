@@ -3,25 +3,28 @@ from ErrorMessages import ErrorMessages
 
 
 class Calculator:
-    def __init__(self):
-        pass
 
-    def add(self, a, b):
+    @staticmethod
+    def add(a, b):
         return a + b
 
-    def subtract(self, a, b):
+    @staticmethod
+    def subtract(a, b):
         return a - b
 
-    def multiply(self, a, b):
+    @staticmethod
+    def multiply(a, b):
         return a * b
 
-    def divide(self, a, b):
+    @staticmethod
+    def divide(a, b):
         if b != 0:
             return a / b
         else:
             return ErrorMessages.DivZero
 
-    def power(self, a, b):
+    @staticmethod
+    def power(a, b):
         if a > 0:
             return a ** b
         if a == 0:
@@ -31,7 +34,8 @@ class Calculator:
                 return ErrorMessages.ZeroBadPow
         return ErrorMessages.NegBasePow
 
-    def log(self, a, b):
+    @staticmethod
+    def log(a, b):
         if a < 0:
             return ErrorMessages.InNumber
         elif b <= 0:
