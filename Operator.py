@@ -7,3 +7,4 @@ class Operator(enum.Enum):
     Multiply = '*'
     Division = '/'
     Power = '^'
+    log = 'log'

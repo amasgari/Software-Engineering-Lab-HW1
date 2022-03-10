@@ -7,3 +7,5 @@ class ErrorMessages:
     ZeroBadPow = 'Non-positive power for zero'
     NegBasePow = 'Negative base in power operation'
     UnknownFormat = 'Unknown Input Format'
+    InNumber = 'Invalid Number'
+    InBase = "Invalid Base Number"

@@ -1,3 +1,4 @@
+import math
 from ErrorMessages import ErrorMessages
 
 
@@ -29,3 +30,13 @@ class Calculator:
             else:
                 return ErrorMessages.ZeroBadPow
         return ErrorMessages.NegBasePow
+
+    def log(self, a, b):
+        if a < 0:
+            return ErrorMessages.InNumber
+        elif b <= 0:
+            return ErrorMessages.InBase
+        try:
+            return math.log(a, b)
+        except:
+            return ErrorMessages.InvalidOperand

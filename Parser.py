@@ -32,7 +32,7 @@ class Parser:
             operator = inputs[1]
             if not operand1 or not operand2:
                 return ErrorMessages.InvalidOperand
-            if operator not in ['+', '-', '/', '*', '^']:
+            if operator not in ['+', '-', '/', '*', '^', 'log']:
                 return ErrorMessages.UnsupportedOperator
             return operand1, operand2, operator
 

@@ -13,7 +13,6 @@ while True:
         break
     else:
         parse_result = parser.parse(inp)
-        print(parse_result)
         out = ''
         if type(parse_result) is ErrorMessages:
             out = parse_result
@@ -28,4 +27,6 @@ while True:
                 out = calculator.divide(parse_result[0], parse_result[1])
             elif parse_result[2] == Operator.Power.value:
                 out = calculator.power(parse_result[0], parse_result[1])
+            elif parse_result[2] == Operator.log.value:
+                out = calculator.log(parse_result[0], parse_result[1])
         print(out)
