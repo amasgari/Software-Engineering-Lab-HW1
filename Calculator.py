@@ -19,3 +19,13 @@ class Calculator:
             return a / b
         else:
             return ErrorMessages.DivZero
+
+    def power(self, a, b):
+        if a > 0:
+            return a ** b
+        if a == 0:
+            if b > 0:
+                return a ** b
+            else:
+                return ErrorMessages.ZeroBadPow
+        return ErrorMessages.NegBasePow
